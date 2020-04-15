@@ -1,11 +1,13 @@
-;
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {}
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatButtonModule } from '@angular/material/button';
+import { NgModule } from '@angular/core';
+ import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import {}
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
