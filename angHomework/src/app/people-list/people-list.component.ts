@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonService } from '../person.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-people-list',
@@ -7,12 +8,16 @@ import { PersonService } from '../person.service';
   styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
-  pepLists: string[];
-  constructor(private personService: PersonService ) {}
+
+  peopleList: User[];
+
+  constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
-    this.pepLists = this.personService.getPerson();
     
+    this.personService.getPeopleWeb().subscribe((users)=>{
+      this.peopleList = users;
+    });
   }
 
 }

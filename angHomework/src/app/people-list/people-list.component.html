@@ -1,7 +1,8 @@
-<p style="font-size: 20px; margin-left: 35px; text-decoration: underline;">List of People</p>
-<div *ngFor="let peplist of pepLists">
-    <div>
-        <ul><li>{{peplist}}</li></ul>
-        
-    </div>
+<p>people-list works!</p>
+<div *ngFor="let person of peopleList">
+    <div>{{person.name}}</div>
+    <div>{{person.username}}</div>
+    <div>{{person.email}}</div>
+    <div>{{person.userExperience}</div>
+    <div>{{person.isAdmin}}</div>
 </div>

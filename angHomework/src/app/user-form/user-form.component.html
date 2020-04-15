@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>User Form</h1>
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+        <!-- {{ diagnostic }} -->
+            <h1>{{ currentMessage }}</h1>
+            <input 
+                type="text"
+                placeholder="Name"
+                required
+                [(ngModel)]="model.name" 
+                name="name"
+            >
+            <input 
+                type="text"
+                placeholder="Username"
+                required
+                [(ngModel)]="model.username" 
+                name="username"
+            >
+            <input 
+                type="text"
+                placeholder="Email"
+                required
+                [(ngModel)]="model.email" 
+                name="email"
+            >
+            <input 
+                type="number"
+                placeholder="User Experience"
+                required
+                [(ngModel)]="model.userExperience" 
+                name="userExperience"
+            >
+            <input 
+                type="text"
+                placeholder="Is Admin?"
+                required
+                [(ngModel)]="model.isAdmin" 
+                name="isAdmin"
+            >
+            <button type="submit">Submit</button>
+
+            <br />
+            <hr />
+
+            <button (click)="toggle()">Toggle</button>
+            <div [@brightDim]="isBright ? 'bright' : 'dim'" class="my-container">
+                <p>This box is now {{ isBright ? 'Bright' : 'Dim' }}!</p>
+            </div>
+    </form>
+</div>
